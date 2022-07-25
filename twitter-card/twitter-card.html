@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <section>
+        <div class="twitter-card">
+
+            <!-- Header photo  -->
+            <img id="header-photo" src="https://conceptartworld.com/wp-content/uploads/2017/03/Legend-of-Zelda-Link-Fan-Art-Concept-Illustration-00-M01.jpg" alt="portada">
+
+            <!-- profile picture -->
+            <img id="profile" src="https://lh3.googleusercontent.com/a-/AFdZucraZEhw7bKdymUTXwXugi5pVPkTSK3RZtjgOyS3Ig=s288-p-no" alt="perfil">
+
+            <!-- Names and profession center -->
+            <h1 id="name">Hugo Sandoval</h1>
+            <p id="prof">Fullstack Developer</p>
+
+            <!-- This part is for the Contact info and Country -->
+            <div id="icons">
+                <img id="flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Guatemala.svg/800px-Flag_of_Guatemala.svg.png" alt="country">
+                <p>Guatemala</p>
+                <img id="email" src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="contact">
+                <p>Send e-mail</p>
+            </div>
+
+            <!-- stats section, followers and following -->
+            <div id="stats">
+                <p id="followers">32,650 <br />Followers</p>
+                <p id="following">1,369 <br />Following</p>
+            </div>
+
+            <!-- Input for Follow or Unfollow, working as a radio input -->
+            <div id="footer-button">
+                <input id="follow" type="radio" name="Follow">
+                <label id="follow-text" class="tab_title" for="follow">Follow</label>
+                <input id="unfollow" type="radio" name="Follow" checked>
+                <label id="unfollow-text" class="tab_title" for="unfollow">Unfollow</label>
+            </div>
+        </div>
+    </section>
+    <script>
+        var num = 32650;
+        var fol = document.getElementById("followers");
+        var checked2 = document.getElementById("unfollow");
+        var checked = document.getElementById("follow")
+        checked.addEventListener('change', function() {
+            if (this.checked) {
+                console.log("Checked");
+                num += 1;
+            }
+            fol.innerHTML = num + "<br />Followers";
+        });
+        checked2.addEventListener('change', function() {
+            if (this.checked) {
+                alert("Esta a punto de dejar de seguir a este DIOS DEL SEXO!!! Pienselo dos veces.");
+                console.log("NOT CHECKED");
+                num -= 1;
+            }
+            fol.innerHTML = num + "<br />Followers";
+        });
+        fol.innerHTML = num + "<br />Followers";
+
+    </script>
+</body>
+</html>

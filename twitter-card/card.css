@@ -1,0 +1,175 @@
+body {
+    background-image: url(https://img.freepik.com/premium-photo/bunch-twitter-icons-logos-3d-background_125322-9.jpg?w=2000);
+}
+section {
+    width: 650px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+.twitter-card {
+    font-family: sans-serif;
+    width: 600px;
+    height: 900px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header photo*/
+.twitter-card #header-photo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+/* profile picture */
+.twitter-card #profile {
+    position: absolute;
+    top: 22%;
+    border-radius: 100px;
+    width: 195px;
+    height: 200px;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+}
+
+/* Names and profession center */
+.twitter-card #name {
+    position: absolute;
+    font-size: 40px;
+    font-weight: 600;
+    top: 400px;
+}
+.twitter-card #prof {
+    position: absolute;
+    top: 480px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(27, 27, 44);
+}
+
+/* This part is for the Contact info and Country */
+.twitter-card #icons {
+    bottom: 200px;
+    position: absolute;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 1fr 3fr 1fr;
+    grid-gap: 10px;
+}
+.twitter-card #icons #flag {
+    place-self: center;
+    grid-column: 2;
+    width: 50px;
+    height: 40px;
+}
+.twitter-card #icons p:nth-child(2) {
+    top: 10px;
+    grid-column: 3;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(27, 27, 44);
+}
+.twitter-card #icons #email {
+    place-self: center;
+    grid-column: 4;
+    width: 50px;
+    height: 50px;
+}
+.twitter-card #icons p:nth-child(4) {
+    top: 10px;
+    grid-column: 5;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(27, 27, 44);
+}
+
+
+/* stats section, followers and following */
+.twitter-card #stats {
+    position: absolute;
+    width: 99%;
+    bottom: 70px;
+    display: grid;
+    grid-auto-flow: column;
+    flex-direction: row;
+    border-style: solid;
+    border-color: rgb(67, 69, 77);
+    border-width: 2px;
+}
+.twitter-card #stats p {
+    margin: 0px;
+    width: 296px;
+    padding: 12px 0 12px 0;
+    border-right: solid;
+    border-color: rgb(67, 69, 77);
+    text-align: center;
+    border-width: 2px;
+    background: white;
+    place-self: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(27, 27, 44);
+    box-sizing: content-box;
+}
+
+
+
+.twitter-card #footer-button {
+    position: absolute;
+    bottom: 0;
+    background: ;
+    width: 100%;
+    height: 70px;
+}
+.twitter-card #follow-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 6px 6px 0 0;
+    background-color: rgb(75, 236, 97);
+    opacity: 1;
+    z-index: 5;
+}
+.twitter-card #follow-text:hover {
+    background: rgb(15, 228, 43);
+}
+.twitter-card #unfollow-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 6px 6px 0 0;
+    background-color: rgb(255, 78, 72);
+    opacity: 1;
+}
+.twitter-card #unfollow-text:hover {
+    background: rgb(211, 44, 2);
+}
+
+.twitter-card #footer-button input {
+    display: none;
+    visibility: hidden;
+}
+
+.twitter-card #footer-button #follow:checked + #follow-text {
+    display: flex;
+    display: none;
+}
+
